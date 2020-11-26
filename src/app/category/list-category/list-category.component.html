@@ -1,0 +1,20 @@
+<div class="col-md-6 category-container">
+  <h2 style="margin: auto"> Category Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addCategory()"> Add Category</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let category of categories">
+      <td class="hidden">{{ category.id }}</td>
+      <td>{{ category.name }}</td>
+      <td><button class="btn btn-success" (click)="deleteCategory(category)"> Delete</button>
+        <button class="btn btn-success" (click)="editCategory(category)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
